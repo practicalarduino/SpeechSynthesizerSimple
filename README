@@ -1,0 +1,53 @@
+Speech Synthesizer Simple
+=========================
+
+Copyright 2009 Jonathan Oxer
+Copyright 2009 Hugh Blemings
+
++---------------------------------------------------------------------+
+| This project is featured in the book "Practical Arduino" by         |
+| Jonathan Oxer and Hugh Blemings (Apress, 2009). More information    |
+| about the book and this project is available at:                    |
+|                                                                     |
+| www.practicalarduino.com/projects/medium/speech-synthesizer         |
++---------------------------------------------------------------------+
+
+Synthesized speech was for a long time the Holy Grail of computing,
+and back in the 1980s when a 4MHz CPU made your computer the fastest
+machine in the neighborhood it just wasn't practical for software to
+create intelligible speech. In those days the only sensible way to
+generate speech was to offload the task to dedicated hardware because
+the CPU simply couldn't keep up. The most widely used speech chip
+through the 80s and early 90s was the famous SPO256A-AL2, the allophone
+speech processor. It was used in toys, in external speech synthesizer
+peripherals for desktop computers, in industrial control systems, and
+all sorts of other unexpected places. Then as CPU power continued to
+increase rapidly speech synthesis was moved to being a software
+function, and nowadays of course it is almost always done entirely in
+software by the main CPU using only a tiny fraction of the available
+processing power. As a result the SPO256 dropped out of production and
+became a footnote in the history of technology.
+
+Which leaves Arduino developers in a quandary, because in terms of
+processing power the ATmega chips put us back into the realm of 80s
+desktops again. An ATmega could possibly produce intelligible speech
+directly but it would use every available CPU cycle to do it, and the
+Arduino itself would be pretty much useless at doing anything else at
+the same time. Not much good if you just want to add voice feedback to
+an existing project. However, the demise of the SPO256 means you can't
+just link one up to your Arduino and offload speech generation to it.
+
+With old stock of the SPO256 drying up Magnevation decided to do
+something about it, and designed their own speech chip that works on
+the same principles as its predecessor but has a much smaller physical
+package and offers a handy serial interface rather than a clunky
+parallel interface. The result is the SpeakJet, an 18-pin DIP device
+that can do everything the old SPO256 did plus more.
+
+In this project we assemble a speech-synthesizer shield that combines a
+SpeakJet chip with a simple audio amplifier to let you add speech output
+to a new or existing Arduino project.
+
+This version of the code is a minimal test program that lets you send
+a sequence of allophones to the SpeakJet chip and have it speak out a
+sentence.
