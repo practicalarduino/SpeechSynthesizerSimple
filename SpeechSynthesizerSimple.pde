@@ -26,7 +26,7 @@ uint8_t message[] = {
 /* my       */ 140, 155, WP,
 /* name     */ 141, 154, 140, WP,
 /* is       */ 8, 129, 167, WP,
-/* arduino  */ 132, 148, 175, 147, 128, 142, 137, WP
+/* arduino  */ 152, 148, 175, 147, 128, 141, 164, WP
 };
 
 int messageSize = sizeof(message);
